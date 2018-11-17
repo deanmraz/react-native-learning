@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, Button, View } from 'react-native';
-import TopBar from './src/components/TopBar';
-import Content from './src/components/Content';
+import MainPage from './src/components/MainPage';
 
 export default class App extends React.Component {
 
@@ -27,8 +26,12 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TopBar style={styles.top} text={this.state.topText} />
-        <Content style={styles.content} text={this.state.contentText} />
+        <MainPage
+          topStyle={styles.top}
+          contentStyle={styles.content}
+          topText={this.state.topText}
+          contentText={this.state.contentText}
+        />
         <View style={styles.nav}>
           <View style={styles.button}>
             <Button
