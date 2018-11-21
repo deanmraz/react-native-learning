@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, WebView } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <WebView
+        useWebKit={true}
+        source={{uri: 'https://docs.expo.io/versions/v31.0.0/react-native/webview'}}
+        style={{marginTop: 20}}
+      />
     );
   }
 }
